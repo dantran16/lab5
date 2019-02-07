@@ -12,13 +12,13 @@
 <body>
 	<div class="container">
 	<h1>My HCI Friends</h1>
-	
-	<div class="friends">
-		<img src=""> </img>
-		<h3> Fake friend </h3>
-		<p> All my friends are imaginary </p>
-	</div>
-	
+	{{#each friends}}
+		<div class="friends" id="{{id}}">
+			<img class="img-responsive" src={{imageURL}}> </img>
+			<h3> {{name}}</h3>
+			<p> {{description}} </p>
+		</div>
+	{{/each}}
 	<form id="addFriendForm" role="form" method="get" action="/add">
 		<h3>Add a friend</h3>
 	    <div class="form-group">
